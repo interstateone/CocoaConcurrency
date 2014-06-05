@@ -41,6 +41,11 @@
 
 int main(int argc, char *argv[]) {
 	@autoreleasepool {
+		// From Apple's Threading Guide (https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Multithreading/AboutThreads/AboutThreads.html#//apple_ref/doc/uid/10000057i-CH6-SW16)
+		//
+		// "A process runs until all non-detached threads have exited. By default, only the application’s main thread is created as non-detached, but you can create other threads that way as well."
+		// Because pthreads are by default non-detached a lock is not required for the pthread example to finish calculating all of the Fibonacci numbers
+		// NSThreads are detached by default, so in this case we're using a condition lock to block the main thread until all other threads have finished
 		NSConditionLock *conditionLock = [[NSConditionLock alloc] initWithCondition:0];
 		
 		for (NSInteger index = 0; index < 10; index += 1) {

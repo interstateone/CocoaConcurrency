@@ -21,12 +21,14 @@
 }
 
 - (void)fibonacci:(NSNumber *)indexNumber {
-	NSInteger index = [indexNumber integerValue];
-	
-	[self.conditionLock lock];
-	NSInteger result = [self calculateFibonacci:index];
-	NSLog(@"fibonacci number %ld: %ld", (long)index, (long)result);
-	[self.conditionLock unlockWithCondition:[self.conditionLock condition] + 1];
+	@autoreleasepool {
+		NSInteger index = [indexNumber integerValue];
+			
+		[self.conditionLock lock];
+		NSInteger result = [self calculateFibonacci:index];
+		NSLog(@"fibonacci number %ld: %ld", (long)index, (long)result);
+		[self.conditionLock unlockWithCondition:[self.conditionLock condition] + 1];	
+	}
 }
 
 - (NSInteger)calculateFibonacci:(NSInteger)index {

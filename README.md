@@ -3,6 +3,12 @@ CocoaConcurrency
 
 Examples of concurrency with Cocoa (and related libraries) from the ground up
 
+## Examples
+- [fibonacci_pthread.c](fibonacci_pthread.c): Calculates the first n numbers in the Fibonacci sequence using a pthread per number.
+- [fibonacci_pthread.m](fibonacci_pthread.m): Calculates the first n numbers in the Fibonacci sequence using a NSThread per number.
+- [fibonacci_pthread.swift](fibonacci_pthread.m): A straightforward port of the previous example to Swift just for fun.
+- [nsrunloop.m](nsrunloop.m): "Visualize" the progress of an NSRunLoop using a run loop observer.
+
 ## Resources
 - [Threading Programming Guide (Apple)](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Multithreading/Introduction/Introduction.html) If you pick one link, pick this. Read all of it and follow all of the links. It'll take you a while and that's okay.
 - [Mastering Threads on Mac OS X (Dr. Dobb's)](http://www.drdobbs.com/parallel/mastering-threads-on-macos-x/232602177) Some quick examples with POSIX threads and NSThreads

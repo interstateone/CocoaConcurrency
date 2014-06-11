@@ -54,15 +54,32 @@ class RecursiveLock {
 }
 
 
-let lock = RecursiveLock();
-lock.lock()
+class Logger {
+    var lock: RecursiveLock
+    var value = 1
+    
+    init() {
+        lock = RecursiveLock()
+    }
 
-for i in 1..100 {
-    lock.lock()
-    println("\(i)");
-    lock.unlock()
+    @objc func logMany() {
+        lock.lock()
+        
+        for i in 1...10 {
+            lock.lock()
+            println("\(value++) locks: \(lock.lockCount) threadName: \(lock.lockingThread?.name)");
+            lock.unlock()
+        }
+        
+        lock.unlock()
+    }
 }
 
-lock.unlock()
+let logger = Logger()
 
-println("Is locked? \(lock.isLocked)")
+let thread = NSThread(target: logger, selector: "logMany", object: nil)
+thread.name = "Secondary Thread"
+thread.start()
+
+NSThread.currentThread().name = "Main Thread"
+logger.logMany()

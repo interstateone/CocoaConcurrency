@@ -6,7 +6,7 @@ Examples of concurrency with Cocoa (and related libraries) from the ground up
 ## Examples
 - [fibonacci_pthread.c](fibonacci_pthread.c): Calculates the first n numbers in the Fibonacci sequence using a pthread per number.
 - [fibonacci_nsthread.m](fibonacci_nsthread.m): Calculates the first n numbers in the Fibonacci sequence using a NSThread per number.
-- [fibonacci_nsthread.swift](fibonacci_nsthread.m): A straightforward port of the previous example to Swift just for fun.
+- [fibonacci_nsthread.swift](fibonacci_nsthread.swift): A straightforward port of the previous example to Swift just for fun.
 - [nsrunloop.m](nsrunloop.m): "Visualize" the progress of an NSRunLoop using a run loop observer.
 - [recursivelock.swift](recursivelock.swift): A simple implementation of a recursive lock that can "lock" a thread more than once without deadlocking.
 

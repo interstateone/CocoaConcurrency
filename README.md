@@ -17,3 +17,9 @@ Examples of concurrency with Cocoa (and related libraries) from the ground up
 - [Recursive Locks (Brent Simmons)](http://inessential.com/2013/09/24/recursive_locks) It's funny, I probably glossed over this post when Brent first wrote it because I only had a slight idea as to what a recursive lock might be, and yet here I am again. All three links in this post are great.
 - [Scheduling support for concurrency and parallelism in the Mach operating system (David L. Black)](http://repository.cmu.edu/cgi/viewcontent.cgi?article=2949&context=compsci) Includes details and comparisons of the design of Mach's scheduler. 
 - [A Tour of OSAtomic (Mike Ash)](https://www.mikeash.com/pyblog/friday-qa-2011-03-04-a-tour-of-osatomic.html) A brief overview including compare and swap, spinlocks and memory barriers.
+
+I personally find Wikipedia's computer science articles to be way too dry to begin learning a subject with, however after reading the articles above I found visiting (or revisiting) the following from Wikipedia to be useful:
+
+- [Compare and swap](http://en.wikipedia.org/wiki/Compare-and-swap)
+- [Linearizability and atomicity](http://en.wikipedia.org/wiki/Atomic_(computer_science))
+- [Semaphore](http://en.wikipedia.org/wiki/Semaphore_(programming))

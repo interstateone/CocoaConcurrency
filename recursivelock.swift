@@ -1,14 +1,14 @@
 /* A quick implementation of a recursive lock
 
-   Note that the documentation for NSLock says the following:
+Note that the documentation for NSLock says the following:
 
-   "You should not use this class to implement a recursive lock.
-    Calling the lock method twice on the same thread will lock up your thread permanently.
-    Use the NSRecursiveLock class to implement recursive locks instead."
+"You should not use this class to implement a recursive lock.
+Calling the lock method twice on the same thread will lock up your thread permanently.
+Use the NSRecursiveLock class to implement recursive locks instead."
 
-   I'm taking this to mean that you shouldn't use NSLock as a replacement for NSRecursiveLock, but not that you can't use it to mimic its behaviour.
-   It also seems that recursive locks are a uh... contentious topic.
-   The specific details of both sides are still a bit over my head, but suffice it to say that it's worth examining your design if you plan on using them.
+I'm taking this to mean that you shouldn't use NSLock as a replacement for NSRecursiveLock, but not that you can't use it to mimic its behaviour.
+It also seems that recursive locks are a uh... contentious topic.
+The specific details of both sides are still a bit over my head, but suffice it to say that it's worth examining your design if you plan on using them.
 */
 
 import Cocoa
@@ -21,12 +21,8 @@ class RecursiveLock {
             return lockCount > 0
         }
     }
-    var _lock: NSLock
-    var lockingThread: NSThread? = nil
-    
-    init() {
-        _lock = NSLock()
-    }
+    var _lock = NSLock()
+    var lockingThread: NSThread?
     
     func lock() {
         if !isLocked {
@@ -55,13 +51,9 @@ class RecursiveLock {
 
 
 class Logger {
-    var lock: RecursiveLock
+    var lock = RecursiveLock()
     var value = 1
     
-    init() {
-        lock = RecursiveLock()
-    }
-
     @objc func logMany() {
         lock.lock()
         

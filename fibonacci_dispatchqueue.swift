@@ -20,3 +20,10 @@ let serialQueue = dispatch_queue_create("ca.brandonevans.GCDQueueDemo.Serial", D
 dispatch_apply(10, serialQueue, { fibNum in
     println("fibonacci number \(fibNum): \(fibonacci(fibNum))")
 })
+
+println("\n--- Concurrent Queue with barriers ---")
+for fibNum in 1...10 {
+	dispatch_barrier_async(concurrentQueue, {
+		println("fibonacci number \(fibNum): \(fibonacci(UInt(fibNum)))")
+	})
+}

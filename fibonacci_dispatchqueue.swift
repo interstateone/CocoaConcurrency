@@ -27,3 +27,6 @@ for fibNum in 1...10 {
 		println("fibonacci number \(fibNum): \(fibonacci(UInt(fibNum)))")
 	})
 }
+
+dispatch_release(concurrentQueue)
+dispatch_release(serialQueue)

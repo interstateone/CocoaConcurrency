@@ -19,6 +19,7 @@ Examples of concurrency with Cocoa (and related libraries) from the ground up
 - [Scheduling support for concurrency and parallelism in the Mach operating system (David L. Black)](http://repository.cmu.edu/cgi/viewcontent.cgi?article=2949&context=compsci) Includes details and comparisons of the design of Mach's scheduler. 
 - [A Tour of OSAtomic (Mike Ash)](https://www.mikeash.com/pyblog/friday-qa-2011-03-04-a-tour-of-osatomic.html) A brief overview including compare and swap, spinlocks and memory barriers.
 - [Solution of a problem in concurrent programming control (Edsger W. Dijkstra)](http://dl.acm.org/citation.cfm?id=944331.944352) It took me a while to fully understand the proof. Run through it a few times and take some notes.
+- [NSOperation (NSHipster)](http://nshipster.com/nsoperation/) Solid overview, as usual, from Mattt.
 
 I personally find Wikipedia's computer science articles to be way too dry to begin learning a subject with, however after reading the articles above I found visiting (or revisiting) the following from Wikipedia to be useful:
 

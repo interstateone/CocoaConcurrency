@@ -3,9 +3,9 @@ import Cocoa
 func fibonacci(index: UInt) -> UInt {
     switch (index) {
         case 0, 1:
-            return index
+        return index
         default:
-            return fibonacci(index - 1) + fibonacci(index - 2)
+        return fibonacci(index - 1) + fibonacci(index - 2)
     }
 }
 
@@ -23,9 +23,9 @@ dispatch_apply(10, serialQueue, { fibNum in
 
 println("\n--- Concurrent Queue with barriers ---")
 for fibNum in 1...10 {
-	dispatch_barrier_async(concurrentQueue, {
-		println("fibonacci number \(fibNum): \(fibonacci(UInt(fibNum)))")
-	})
+    dispatch_barrier_async(concurrentQueue, {
+        println("fibonacci number \(fibNum): \(fibonacci(UInt(fibNum)))")
+    })
 }
 
 dispatch_release(concurrentQueue)

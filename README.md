@@ -26,3 +26,7 @@ I personally find Wikipedia's computer science articles to be way too dry to beg
 - [Compare and swap](http://en.wikipedia.org/wiki/Compare-and-swap)
 - [Linearizability and atomicity](http://en.wikipedia.org/wiki/Atomic_(computer_science))
 - [Semaphore](http://en.wikipedia.org/wiki/Semaphore_(programming))
+- [Interrupts](http://en.wikipedia.org/wiki/Interrupt)
+- [Mutual exclusion](http://en.wikipedia.org/wiki/Mutex)
+- [Reentrant mutex](http://en.wikipedia.org/wiki/Reentrant_mutex)
+- [Dining philosophers problem](http://en.wikipedia.org/wiki/Dining_philosophers_problem)

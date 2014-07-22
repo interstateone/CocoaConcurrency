@@ -18,6 +18,7 @@ Examples of concurrency with Cocoa (and related libraries) from the ground up
 - [Recursive Locks (Brent Simmons)](http://inessential.com/2013/09/24/recursive_locks) It's funny, I probably glossed over this post when Brent first wrote it because I only had a slight idea as to what a recursive lock might be, and yet here I am again. All three links in this post are great.
 - [Scheduling support for concurrency and parallelism in the Mach operating system (David L. Black)](http://repository.cmu.edu/cgi/viewcontent.cgi?article=2949&context=compsci) Includes details and comparisons of the design of Mach's scheduler. 
 - [A Tour of OSAtomic (Mike Ash)](https://www.mikeash.com/pyblog/friday-qa-2011-03-04-a-tour-of-osatomic.html) A brief overview including compare and swap, spinlocks and memory barriers.
+- [Let's Build Dispatch Groups (Mike Ash)](https://www.mikeash.com/pyblog/friday-qa-2013-08-16-lets-build-dispatch-groups.html) I love reading Mike's Let's Build articles. The implementation of `ma_dispatch_group_wait` is particularly interesting.
 - [Solution of a problem in concurrent programming control (Edsger W. Dijkstra)](http://dl.acm.org/citation.cfm?id=944331.944352) It took me a while to fully understand the proof. Run through it a few times and take some notes.
 - [NSOperation (NSHipster)](http://nshipster.com/nsoperation/) Solid overview, as usual, from Mattt.
 

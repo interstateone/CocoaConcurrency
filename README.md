@@ -21,6 +21,7 @@ Examples of concurrency with Cocoa (and related libraries) from the ground up
 - [Let's Build Dispatch Groups (Mike Ash)](https://www.mikeash.com/pyblog/friday-qa-2013-08-16-lets-build-dispatch-groups.html) I love reading Mike's Let's Build articles. The implementation of `ma_dispatch_group_wait` is particularly interesting.
 - [Solution of a problem in concurrent programming control (Edsger W. Dijkstra)](http://dl.acm.org/citation.cfm?id=944331.944352) It took me a while to fully understand the proof. Run through it a few times and take some notes.
 - [NSOperation (NSHipster)](http://nshipster.com/nsoperation/) Solid overview, as usual, from Mattt.
+- [Asynchronous Message Passing With Actors in Objective-C (Alberto De Bortoli)](http://albertodebortoli.github.io/blog/2014/05/20/asynchronous-message-passing-with-actors-in-objective-c/) This had been in my reading list for quite a while. I'm glad I revisited it after learning some of this other stuff first.
 
 I personally find Wikipedia's computer science articles to be way too dry to begin learning a subject with, however after reading the articles above I found visiting (or revisiting) the following from Wikipedia to be useful:
 
